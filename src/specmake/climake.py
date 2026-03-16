@@ -36,7 +36,7 @@ from .pkgitems import BuildItemTypeProvider, PackageBuildDirector
 
 
 def _get_args_and_init_logging(argv: list[str]) -> argparse.Namespace:
-    parser = create_argument_parser()
+    parser = create_argument_parser(documentation=climake.__doc__)
     parser.add_argument(
         '--force',
         type=str,

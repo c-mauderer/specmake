@@ -42,7 +42,7 @@ _GCOV_INFO = re.compile(r"\*\*\* BEGIN OF GCOV INFO BASE64 \*\*\*(.*)"
 
 def cligcovr(argv: list[str] = sys.argv) -> None:
     """ Removes existing coverage files and runs gcovr using test output. """
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(documentation=cligcovr.__doc__)
     parser.add_argument("-o",
                         "--object-directory",
                         type=str,

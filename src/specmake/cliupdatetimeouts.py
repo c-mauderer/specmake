@@ -72,7 +72,7 @@ def _update_timeouts(args: argparse.Namespace, report_path: str,
 
 def cliupdatetimeouts(argv: list[str] = sys.argv) -> None:
     """ Update the test timeouts using the specified test reports. """
-    parser = create_argument_parser()
+    parser = create_argument_parser(description=cliupdatetimeouts.__doc__)
     parser.add_argument("--config-file",
                         type=str,
                         default=None,

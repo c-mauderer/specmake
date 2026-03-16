@@ -114,7 +114,7 @@ def _write_perf_limits(perf_limits: Item, limits_by_uid: _LimitsByUID) -> None:
 
 def cliupdateperf(argv: list[str] = sys.argv) -> None:
     """ Updates a performance limits item. """
-    parser = create_argument_parser()
+    parser = create_argument_parser(description=cliupdateperf.__doc__)
     parser.add_argument("--config-file",
                         type=str,
                         default=None,

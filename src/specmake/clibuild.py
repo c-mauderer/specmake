@@ -42,7 +42,7 @@ from .util import create_build_argument_parser
 
 
 def _get_args_and_init_logging(argv: list[str]) -> argparse.Namespace:
-    parser = create_build_argument_parser()
+    parser = create_build_argument_parser(description=clibuild.__doc__)
     parser.add_argument(
         "--do-not-use-git",
         help="do not use git to track changes in the workspace",

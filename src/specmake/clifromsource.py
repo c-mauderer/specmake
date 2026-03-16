@@ -66,7 +66,7 @@ def clifromsource(argv: list[str] = sys.argv) -> None:
     Generates interface items from Doxygen generated XML files using the
     configuration.
     """
-    parser = create_argument_parser()
+    parser = create_argument_parser(documentation=clifromsource.__doc__)
     parser.add_argument("--config-file",
                         type=str,
                         default=None,
